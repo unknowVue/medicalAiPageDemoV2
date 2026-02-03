@@ -6,7 +6,7 @@ import { viteSingleFile } from 'vite-plugin-singlefile'
 // https://vite.dev/config/
 export default defineConfig({
   // base: './',
-  base: '/medicalAiPageDemo/', 
+  base: '/medicalAiPageDemoV2/', 
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src')
