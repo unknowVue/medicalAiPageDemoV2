@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  .left {
+    .title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.2px;
+    }
+    .subTitle {
+      color: var(--text-muted);
+      margin-top: 6px;
+      font-size: 13px;
+    }
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    :global {
+      .mantine-Button-root {
+        border-radius: var(--radius-md);
+      }
+    }
+    :global {
+      // .mantine-Button-label {
+      //   color: rgb(24, 24, 24);
+      // } 
+    }
+  }
+}

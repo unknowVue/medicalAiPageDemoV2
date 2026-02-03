@@ -1,0 +1,143 @@
+@use '@/styles/common.scss' as *;
+
+// .header {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   .left {
+//     .title {
+//       font-size: 29px;
+//       font-weight: bolder;
+//     }
+//     .subTitle {
+//       color: #717981;
+//     }
+//   }
+//   .right {
+//     :global {
+//       // .mantine-Button-label {
+//       //   color: rgb(24, 24, 24);
+//       // } 
+//     }
+//   }
+// }
+
+.divider {
+  margin-bottom: 15px;
+  height: 1px;
+  background-color: var(--border);
+}
+
+.clear-search { 
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+}
+
+.current-filter {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-top: 20px;
+  .current-filter-title {
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  .filter-label-list {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    :global {
+      .ant-tag-close-icon {
+        color: #9a4a1e;
+        margin-left: 5px;
+        &:hover {
+          color: #7c3f1d;
+        }
+      }
+    }
+  }
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 1px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  .left {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    .list-title {
+      font-weight: 600;
+      font-size: 17px;
+    }
+    .time-options-list {
+      display: flex;
+      align-items: center;
+      column-gap: 6px;
+      .time-option {
+        padding: 4px 10px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        font-size: 14px;
+        background: var(--surface-alt);
+        box-shadow: var(--shadow-sm);
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+          background-color: #e9eef9;
+        }
+        &:active {
+          transform: translateY(2px);
+        }
+        &.active {
+          color: #fff;
+          background-color: var(--primary);
+          border-color: var(--primary);
+        }
+      }
+    }
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    color: var(--text-muted);
+  }
+}
+
+.searchForm {
+  :global {
+    // 设置input的提示字体颜色]
+    .ant-input::placeholder, .ant-picker-input input::placeholder, .ant-picker-suffix {
+      color: #8a94a6;
+    }
+  }
+}
+
+.list-content {
+  padding: 20px 0px;
+  padding-top: 0px;
+  :global {
+    :where(.css-dev-only-do-not-override-xbngoj).ant-table-wrapper .ant-table-thead >tr>th {
+      background: var(--surface-alt);
+    }
+    .ant-pagination {
+      padding-right: 10px;
+    }
+  }
+}

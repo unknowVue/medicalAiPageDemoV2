@@ -1,0 +1,101 @@
+@use '@/styles/common.scss' as *;
+
+.searchForm {
+  :global {
+    // 设置input的提示字体颜色]
+    .ant-input::placeholder {
+      color: #8a94a6;
+    }
+  }
+}
+
+.form-wrap {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  .input-box {
+    flex: 1;
+  }
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  justify-content: flex-end;
+  .page {
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  .jump {
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  .vertical-line {
+    height: 25px;
+    width: 2px;
+    background-color: var(--border);
+    // margin: 0 5px;
+  }
+  .jump-box {
+    display: flex;
+    align-items: center;
+    column-gap: 9px;
+  }
+}
+.prePage {
+  &:disabled,
+  &[data-disabled] {
+    border-color: rgb(233, 233, 233);
+    background-color: transparent;
+  }
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 1px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  .left {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    .list-title {
+      font-weight: 600;
+      font-size: 17px;
+    }
+    .time-options-list {
+      display: flex;
+      align-items: center;
+      column-gap: 4px;
+      .time-option {
+        padding: 3px 9px;
+        border: 1px solid rgb(227, 227, 227);
+        border-radius: 5px;
+        font-size: 14px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+          background-color: rgb(245, 245, 245);
+        }
+        &:active {
+          transform: translateY(2px);
+        }
+        &.active {
+          color: white;
+          background-color: #3662e3;
+        }
+      }
+    }
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    color: #8490a0;
+  }
+}
